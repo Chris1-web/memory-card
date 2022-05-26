@@ -1,9 +1,9 @@
-function Scoreboard() {
+function Scoreboard(props) {
   return (
     <ul>
       <li>
         Score
-        <p>0</p>
+        <p>{props.score}</p>
       </li>
       <li>
         Best Score

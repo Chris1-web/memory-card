@@ -78,6 +78,7 @@ body {
   border-radius: 20rem;
   padding: 1rem;
   background-color: white;
+  cursor: pointer;
 }
 
 footer {
