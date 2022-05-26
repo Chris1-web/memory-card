@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: "Work Sans", sans-serif;
+  position: relative;
 }
 
 .container {
@@ -77,4 +78,21 @@ body {
   border-radius: 20rem;
   padding: 1rem;
   background-color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 1rem;
+}
+
+footer img {
+  width: 2rem;
+  height: auto;
 }
