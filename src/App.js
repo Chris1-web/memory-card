@@ -15,6 +15,8 @@ import ray from "./images/ray.png";
 import shark from "./images/shark.png";
 import walrus from "./images/walrus.png";
 import { useState } from "react";
+import { useEffect } from "react";
+import Randomizer from "./components/Randomizer";
 
 function App() {
   const [originalImages, setOriginalImages] = useState([
@@ -32,6 +34,22 @@ function App() {
     walrus,
   ]);
   const [score, setScore] = useState(0);
+
+  // on component mount, shuffle originalImages Array
+  useEffect(() => {
+    const randomizedImages = Randomizer(originalImages);
+    setOriginalImages([...randomizedImages]);
+  }, []);
+
+  // considering changing the dependency to original images
+  useEffect(() => {
+    document.querySelector(".cards").addEventListener("click", (e) => {
+      setScore(score + 1);
+      const randomizedImages = Randomizer(originalImages);
+      setOriginalImages([...randomizedImages]);
+    });
+  }, [score]);
+
   return (
     <div className="container">
       <Navigation score={score} />
