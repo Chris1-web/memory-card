@@ -36,7 +36,6 @@ function App() {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [selectedImage, setSelectedImage] = useState([]);
-  const [gameOver, setGameOver] = useState(false);
 
   // on component mount, shuffle originalImages Array
   useEffect(() => {
@@ -49,10 +48,12 @@ function App() {
       if (!selectedImage.includes(e.target.src)) {
         setScore(score + 1);
         setSelectedImage([e.target.src, ...selectedImage]);
-        const randomizedImages = Randomizer(originalImages);
-        setOriginalImages([...randomizedImages]);
+        setOriginalImages([...Randomizer(originalImages)]);
       } else {
-        alert("game over");
+        score > bestScore && setBestScore(score);
+        setScore(0);
+        setOriginalImages([...Randomizer(originalImages)]);
+        setSelectedImage([]);
       }
     };
     document.querySelector(".cards").addEventListener("click", updateScore);
