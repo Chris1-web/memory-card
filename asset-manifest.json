@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.fd83ef63.css",
+    "main.js": "/memory-card/static/js/main.f0d8d733.js",
+    "static/media/raccoon.png": "/memory-card/static/media/raccoon.b23c2c7ff8e03ed2a654.png",
+    "static/media/penguin.png": "/memory-card/static/media/penguin.1b5f38561f5b4a527aeb.png",
+    "static/media/mouse.png": "/memory-card/static/media/mouse.8459f257f2789f3d9e68.png",
+    "static/media/gorilla.png": "/memory-card/static/media/gorilla.97e861b1fe63d6f57e51.png",
+    "static/media/hippo.png": "/memory-card/static/media/hippo.07f245bf22713fb2d1d3.png",
+    "static/media/koala.png": "/memory-card/static/media/koala.74b9b5ffc29bb00a33d7.png",
+    "static/media/elephant.png": "/memory-card/static/media/elephant.35c7353092b641411d91.png",
+    "static/media/cow.png": "/memory-card/static/media/cow.0e1b88f22d1b9ae538b1.png",
+    "static/media/shark.png": "/memory-card/static/media/shark.4a6ed7b12abcc7f36351.png",
+    "static/media/boar.png": "/memory-card/static/media/boar.6c7170f310a67ac7ada2.png",
+    "static/media/ray.png": "/memory-card/static/media/ray.894e974e9ac46ac7f219.png",
+    "static/media/walrus.png": "/memory-card/static/media/walrus.fe466b6535cff2b98cd8.png",
+    "index.html": "/memory-card/index.html",
+    "main.fd83ef63.css.map": "/memory-card/static/css/main.fd83ef63.css.map",
+    "main.f0d8d733.js.map": "/memory-card/static/js/main.f0d8d733.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd83ef63.css",
+    "static/js/main.f0d8d733.js"
+  ]
+}
