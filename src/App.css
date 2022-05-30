@@ -27,6 +27,7 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 1.2rem;
   border-bottom: 0.2rem solid black;
   padding-bottom: 1rem;
@@ -44,6 +45,11 @@ body {
   flex-direction: column;
   align-items: center;
   padding-right: 1rem;
+}
+
+.navigation li p {
+  font-size: 2.5rem;
+  color: red;
 }
 
 .navigation li:first-child {
