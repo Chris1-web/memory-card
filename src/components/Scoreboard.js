@@ -7,7 +7,7 @@ function Scoreboard(props) {
       </li>
       <li>
         Best Score
-        <p>0</p>
+        <p>{props.bestScore}</p>
       </li>
     </ul>
   );

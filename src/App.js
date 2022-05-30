@@ -34,6 +34,9 @@ function App() {
     walrus,
   ]);
   const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
+  const [selectedImage, setSelectedImage] = useState([]);
+  const [gameOver, setGameOver] = useState(false);
 
   // on component mount, shuffle originalImages Array
   useEffect(() => {
@@ -41,18 +44,27 @@ function App() {
     setOriginalImages([...randomizedImages]);
   }, []);
 
-  // considering changing the dependency to original images
   useEffect(() => {
-    document.querySelector(".cards").addEventListener("click", (e) => {
-      setScore(score + 1);
-      const randomizedImages = Randomizer(originalImages);
-      setOriginalImages([...randomizedImages]);
-    });
+    const updateScore = function (e) {
+      if (!selectedImage.includes(e.target.src)) {
+        setScore(score + 1);
+        setSelectedImage([e.target.src, ...selectedImage]);
+        const randomizedImages = Randomizer(originalImages);
+        setOriginalImages([...randomizedImages]);
+      } else {
+        alert("game over");
+      }
+    };
+    document.querySelector(".cards").addEventListener("click", updateScore);
+    return () =>
+      document
+        .querySelector(".cards")
+        .removeEventListener("click", updateScore);
   }, [score]);
 
   return (
     <div className="container">
-      <Navigation score={score} />
+      <Navigation score={score} bestScore={bestScore} />
       <Main originalImages={originalImages} />
       <Footer />
     </div>
