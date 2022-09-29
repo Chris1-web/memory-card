@@ -1,4 +1,5 @@
 import "./App.css";
+import "./queries.css";
 import Navigation from "./components/Navigation";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
